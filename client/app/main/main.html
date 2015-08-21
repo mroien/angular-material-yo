@@ -38,6 +38,29 @@
   <input type="text" ng-model="color" required md-maxlength="10">
 </md-input-container>
 
+<!--autocomplete-->
+<md-autocomplete md-selected-item="selectedItem" md-search-text="searchText" md-items="item in getMatches(searchText)" md-item-text="item.display">
+  <md-item-template>
+    <span md-highlight-text="searchText">{{item.display}}</span>
+  </md-item-template>
+  <md-not-found>
+    No matches found.
+  </md-not-found>
+</md-autocomplete>
+
+<!--fab buttons-->
+<md-button class="md-fab" aria-label="FAB">
+  <md-icon md-svg-src="assets/images/penguin.svg"></md-icon>
+</md-button>
+<!-- mini-FAB -->
+<md-button class="md-fab md-mini" aria-label="Mini FAB">
+  <md-icon md-svg-src="assets/images/penguin.svg"></md-icon>
+</md-button>
+<!-- Button with SVG Icon -->
+<md-button class="md-icon-button" aria-label="Custom Icon Button">
+  <md-icon md-svg-icon="assets/images/penguin.svg"></md-icon>
+</md-button>
+
 <!-- Features Body -->
 <div class="container">
   <div class="row">
